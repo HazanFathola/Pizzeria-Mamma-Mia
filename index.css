@@ -1,0 +1,25 @@
+/* transition */
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  margin: 0;
+}
+
+.hero {
+  background-image: url(/bilder/Pizza.jpg);
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+h1 {
+  margin: 0;
+}
+.hero a {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+}
