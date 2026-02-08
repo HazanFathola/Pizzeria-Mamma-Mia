@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playpen+Sans:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Playpen+Sans:wght@100..800&display=swap");
+.wrapper {
+  height: 300vh;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +14,7 @@ body {
   color: #fff;
   background-color: #1a1a1a;
   font-size: 1.6rem;
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .hero {
@@ -22,31 +27,51 @@ body {
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(/bilder/Pizza.jpg);
   height: 100vh;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .title {
-  margin: 0;
-  font-family: "Playpen Sans", cursive;
+  font-family: "Lobster", cursive;
   font-size: 4.8rem;
-  margin-bottom: 1.6rem;
+  line-height: 4.8rem;
+  margin: 0 0 1.6rem 0;
 }
-.hero a {
+.hero-action {
   background-color: #ff3030;
-  color: white;
+  color: #ddd;
   padding: 1.6rem 3.2rem;
-  border: 0.08rem solid #ff3030;
+  border: 1px solid #ff3030;
   margin-top: 6.4rem;
   text-decoration: none;
-  transition: opacity 2s ease;
+  transition: all 0.2s ease-in-out;
 }
 
-.hero a:hover {
-  background-color: rgba(255, 0, 0, 0.05);
+.hero-action:hover {
+  background-color: transparent;
   color: #ff3030;
 }
-.hero p {
+.subtitle {
   padding: 0;
   margin: 0;
+  color: #ddd;
+}
+@media only screen and (min-width: 600px) {
+  .title {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+  }
+  .subtitle {
+    font-size: 2.4rem;
+  }
+  .hero-action {
+    padding: 1.92rem 4rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .title {
+    font-size: 9.6rem;
+    line-height: 10.4rem;
+  }
 }
