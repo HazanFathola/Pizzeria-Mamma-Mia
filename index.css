@@ -15,9 +15,31 @@ body {
   background-color: #1a1a1a;
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
-}
 
+  --primary-color: #ff3030;
+}
+.nav {
+  height: 8rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  font-size: 1.28rem;
+  text-align: center;
+}
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.16rem;
+}
+.nav-item:hover {
+  color: var(--primary-color);
+}
 .hero {
+  height: calc(100vh - 8rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +48,6 @@ body {
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(/bilder/Pizza.jpg);
-  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,10 +59,10 @@ body {
   margin: 0 0 1.6rem 0;
 }
 .hero-action {
-  background-color: #ff3030;
+  background-color: var(--primary-color);
   color: #ddd;
   padding: 1.6rem 3.2rem;
-  border: 1px solid #ff3030;
+  border: 1px solid var(--primary-color);
   margin-top: 6.4rem;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -49,14 +70,19 @@ body {
 
 .hero-action:hover {
   background-color: transparent;
-  color: #ff3030;
+  color: var(--primary-color);
 }
 .subtitle {
   padding: 0;
   margin: 0;
   color: #ddd;
 }
+
 @media only screen and (min-width: 600px) {
+  .nav {
+    gap: 3.2rem;
+    font-size: 1.6rem;
+  }
   .title {
     font-size: 6.4rem;
     line-height: 6.4rem;
@@ -70,6 +96,9 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+  .nav {
+    gap: 6.4rem;
+  }
   .title {
     font-size: 9.6rem;
     line-height: 10.4rem;
