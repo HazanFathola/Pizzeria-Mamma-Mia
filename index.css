@@ -20,14 +20,28 @@ body {
   --primary-color: #ff3030;
   --text-color: #ddd;
 }
-.button {
+.button,
+.button-inverted {
+  width: fit-content;
   display: inline-block;
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  color: #ddd;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   padding: 1.6rem 3.2rem;
+}
+.button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+.button-inverted {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+.button-inverted:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 .container {
   max-width: 85%;
@@ -76,10 +90,6 @@ body {
   margin-top: 6.4rem;
 }
 
-.hero-action:hover {
-  background-color: transparent;
-  color: var(--primary-color);
-}
 .subtitle {
   color: var(--text-color);
 }
@@ -129,6 +139,7 @@ body {
   flex-direction: column;
   gap: 0.8rem;
 }
+/* ab hier info section */
 .info-wrapper {
   background:
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Pizzateig1.jpg);
@@ -157,6 +168,30 @@ body {
 .days {
   color: var(--text-color);
 }
+/* ab hier beginnt die contact section */
+
+.contact-image {
+  width: 100%;
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+}
+.contact-actions {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contact-detail {
+  margin-top: 0.8rem;
+  color: var(--text-color);
+}
+.contact .heading {
+  margin: 0;
+}
 @media only screen and (min-width: 600px) {
   .nav {
     gap: 3.2rem;
@@ -169,11 +204,20 @@ body {
   .subtitle {
     font-size: 2.4rem;
   }
-  .button {
+  .button,
+  .button-inverted {
     padding: 1.92rem 4rem;
   }
   .about-text {
     font-size: 1.6rem;
+  }
+  .contact-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-image {
+    width: 60%;
   }
 }
 
@@ -210,7 +254,22 @@ body {
     margin: 12.8rem 0;
     padding: 9.6rem 0;
   }
+
+  .contact .heading {
+    margin-bottom: 3.2rem;
+  }
+  .contact-detail {
+    margin-top: 1.6rem;
+    font-size: 1.92rem;
+  }
+  .contact-image {
+    width: 50%;
+  }
+  .contact-actions {
+    flex-direction: row;
+  }
 }
+
 @media only screen and (min-width: 1400px) {
   .container {
     max-width: 1200px;
