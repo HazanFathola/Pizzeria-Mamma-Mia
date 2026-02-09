@@ -9,6 +9,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   color: #fff;
@@ -17,6 +18,20 @@ body {
   font-family: "Inter", sans-serif;
 
   --primary-color: #ff3030;
+  --text-color: #ddd;
+}
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #ddd;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  padding: 1.6rem 3.2rem;
+}
+.container {
+  max-width: 85%;
+  margin: 0 auto;
 }
 .nav {
   height: 8rem;
@@ -46,8 +61,7 @@ body {
   align-items: center;
   text-align: center;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/bilder/Pizza.jpg);
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Pizza.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,13 +73,7 @@ body {
   margin: 0 0 1.6rem 0;
 }
 .hero-action {
-  background-color: var(--primary-color);
-  color: #ddd;
-  padding: 1.6rem 3.2rem;
-  border: 1px solid var(--primary-color);
   margin-top: 6.4rem;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
 }
 
 .hero-action:hover {
@@ -73,16 +81,12 @@ body {
   color: var(--primary-color);
 }
 .subtitle {
-  padding: 0;
-  margin: 0;
-  color: #ddd;
+  color: var(--text-color);
 }
 /* ab hier about section */
-.about-container {
+.about {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 3rem;
-  margin: 0 3rem;
+  gap: 3.2rem;
 }
 .about-content {
   display: flex;
@@ -91,43 +95,67 @@ body {
   align-items: flex-start;
 }
 .heading {
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: var(--primary-color);
   margin: 3.2rem 0 1.6rem;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--primary-color);
 }
+
 .about-text {
   font-size: 1.44rem;
+  color: var(--text-color);
 }
-.button-about-action {
-  max-width: auto;
-  background-color: var(--primary-color);
-  color: #ddd;
-  padding: 1.6rem 3.2rem;
-  border: 1px solid var(--primary-color);
+.about-action {
   margin-top: 3.2rem;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  max-width: auto;
 }
 .about-images {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  gap: 0.8rem;
+  width: 100%;
 }
-.big-pic {
-  height: 70%;
-  width: 50%;
+.about-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.about-image-large {
+  min-width: 50%;
 }
 .small-pics {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  height: 70%;
-  width: 50%;
+  gap: 0.8rem;
 }
-img {
-  height: 15rem;
-  width: 15rem;
+.info-wrapper {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Pizzateig1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3.2rem 0;
+  margin: 4.8rem 0;
+}
+.hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.6rem;
+}
+.info .heading {
+  margin: 0 auto;
+}
+.hours-entry {
+  display: flex;
+  justify-content: space-between;
+  width: 24rem;
+}
+.days {
+  color: var(--text-color);
 }
 @media only screen and (min-width: 600px) {
   .nav {
@@ -141,8 +169,11 @@ img {
   .subtitle {
     font-size: 2.4rem;
   }
-  .hero-action {
+  .button {
     padding: 1.92rem 4rem;
+  }
+  .about-text {
+    font-size: 1.6rem;
   }
 }
 
@@ -153,5 +184,35 @@ img {
   .title {
     font-size: 9.6rem;
     line-height: 10.4rem;
+  }
+  .heading {
+    font-size: 3.2rem;
+  }
+  .about {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 9.6rem;
+    align-items: center;
+  }
+  .about-images,
+  .small-pics {
+    gap: 1.6rem;
+  }
+
+  .hours-entry {
+    width: 32rem;
+    font-size: 1.92rem;
+    margin-bottom: 0.8rem;
+  }
+  .hours {
+    margin-top: 3.2rem;
+  }
+  .info-wrapper {
+    margin: 12.8rem 0;
+    padding: 9.6rem 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
   }
 }
