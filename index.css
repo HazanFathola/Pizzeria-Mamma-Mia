@@ -1,8 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playpen+Sans:wght@100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Playpen+Sans:wght@100..800&display=swap");
-.wrapper {
-  height: 300vh;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -192,6 +189,36 @@ body {
 .contact .heading {
   margin: 0;
 }
+/* ab hier beginnt der footer */
+.footer {
+  background: #303030;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+  padding: 3.2rem 1.6rem;
+  margin-top: 3.2rem;
+  font-size: 1.28rem;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+.footer-item {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.16rem;
+}
+.footer-item:hover {
+  color: var(--primary-color);
+}
+.footer-copyright {
+  margin-top: 1.6rem;
+}
 @media only screen and (min-width: 600px) {
   .nav {
     gap: 3.2rem;
@@ -218,6 +245,17 @@ body {
   }
   .contact-image {
     width: 60%;
+  }
+  .footer {
+    margin-top: 6.4rem;
+    padding: 4.8rem 0;
+    gap: 4rem;
+  }
+  .footer-links {
+    flex-direction: row;
+  }
+  .footer-item {
+    font-size: 1.6rem;
   }
 }
 
@@ -267,6 +305,9 @@ body {
   }
   .contact-actions {
     flex-direction: row;
+  }
+  .footer {
+    margin-top: 9.6rem;
   }
 }
 
